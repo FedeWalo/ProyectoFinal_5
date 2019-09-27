@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="34sp"
+            android:layout_centerInParent="true"
+            android:text="Comidas"
+            android:textColor="#090C1B"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/ListaComidas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:columnWidth="135dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:textColor="#fff"/>
+</LinearLayout>

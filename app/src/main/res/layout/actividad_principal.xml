@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadPrincipal">
+
+    <FrameLayout
+        android:id="@+id/AlojadorDeFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_above="@+id/MenuDeNavegacion"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/MenuDeNavegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/barra_de_navegacion"
+        android:background="?android:attr/windowBackground"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
