@@ -59,6 +59,8 @@ public class ActividadPrincipal extends Activity {
                         case R.id.ItemObjetivos:
                             selectedFragment = new FragmentHomeObjetivos();
                             break;
+                        case R.id.ItemPerfil:
+                            selectedFragment = new FragmentPerfil();
                     }
                     getFragmentManager().beginTransaction().replace(R.id.AlojadorDeFragments,
                             selectedFragment).commit();
