@@ -41,10 +41,11 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
         SQLCrearTabla = "create table Estadisticas(CantFPPorDia integer)";
 
 
-        /*//Creacion tabla Usuarios
-        SQLCrearTabla = "create table Usuarios(NombreUsuario text primary key, Peso integer, Imagen text, NivelDeActividad integer, DiasRacha integer)";
+        //Creacion tabla Usuarios
+        SQLCrearTabla = "create table Perfil(idPerfil integer primary key, NombreUsuario text, Peso integer, NivelDeActividad text, Altura integer,Fecha DATE DEFAULT CURRENT_DATE)";
         BaseDeDatos.execSQL(SQLCrearTabla);
 
+        /*
         //Creacion tabla Rutinas
         SQLCrearTabla = "create table Rutinas(idRutina integer primary key autoincrement, idEnfoque integer, Nombre text, Imagen text, PorcentajeDeEfectividad integer)";
         BaseDeDatos.execSQL(SQLCrearTabla);
