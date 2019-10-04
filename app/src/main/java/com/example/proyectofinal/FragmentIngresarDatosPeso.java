@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -55,31 +56,87 @@ public class FragmentIngresarDatosPeso extends Fragment implements View.OnClickL
         ActividadPrincipal ActividadAnfitriona;
         ActividadAnfitriona = (ActividadPrincipal) getActivity();
         if(BotonPresionado.getId() ==R.id.ConfirmarDatosPeso) {
-            if(PesoAInsertar  > 0 && PesoAInsertar < 150) {
-                PesoAInsertar = Integer.parseInt(PesoIngresado.getText().toString());
-                SemanasAInsertar = Integer.parseInt(SemanasIngresadas.getText().toString());
-                if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() >= 0) {
-                    ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
-                    ClaseObjetivosUsuario U;
-                    U = new ClaseObjetivosUsuario(ActividadAnfitriona.objetivosUsuario.getIdObjetivo(), ActividadAnfitriona.objetivosUsuario.getTipoDeObjetivo(), PesoAInsertar, 0, ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), Static.SumarRestarDias(ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), SemanasAInsertar * 7), ActividadAnfitriona.objetivosUsuario.getPesoInicial());
-                    U.UpdateObjetivo(U, getActivity());
-                    ActividadAnfitriona.HomeObjetivos();
+            if ((PesoIngresado.getText().length() > 0 && SemanasIngresadas.getText().length() > 0)) {
+                if ((Integer.parseInt(PesoIngresado.getText().toString()) > 40 && Integer.parseInt(PesoIngresado.getText().toString()) < 150) && (Integer.parseInt(SemanasIngresadas.getText().toString()) > 0 && Integer.parseInt(SemanasIngresadas.getText().toString()) < 104)) {
+                    PesoAInsertar = Integer.parseInt(PesoIngresado.getText().toString());
+                    SemanasAInsertar = Integer.parseInt(SemanasIngresadas.getText().toString());
+                    ArrayList<ClaseObjetivosUsuario> ListObjetivos;
+                    boolean HayUnObjetivoPesoCargado = false;
+                    ClaseObjetivosUsuario MisObjetivos;
+                    MisObjetivos = new ClaseObjetivosUsuario();
+                    ListObjetivos = MisObjetivos.ObtenerObjetivos(getActivity());
+                    for (ClaseObjetivosUsuario Objetivo : ListObjetivos) {
+                        if (Objetivo.getTipoDeObjetivo() == 0) {
+                            HayUnObjetivoPesoCargado = true;
+                        }
+                    }
+                    if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() >= 0) {
+                        ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
+                        ClaseObjetivosUsuario U;
+                        U = new ClaseObjetivosUsuario(ActividadAnfitriona.objetivosUsuario.getIdObjetivo(), ActividadAnfitriona.objetivosUsuario.getTipoDeObjetivo(), PesoAInsertar, 0, ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), Static.SumarRestarDias(ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), SemanasAInsertar * 7), ActividadAnfitriona.objetivosUsuario.getPesoInicial());
+                        U.UpdateObjetivo(U, getActivity());
+                        ActividadAnfitriona.HomeObjetivos();
 
-                } else {
-                    Calendar calendar = Calendar.getInstance();
-                    ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
-                    Date FechaHoy = calendar.getTime();
-                    ClaseObjetivosUsuario U;
-                    U = new ClaseObjetivosUsuario(0, 0, PesoAInsertar, 0, FechaHoy, Static.SumarRestarDias(FechaHoy, SemanasAInsertar * 7), 0);
-                    U.AgregarNuevoObjetivo(U, getActivity());
-                    ActividadAnfitriona.HomeObjetivos();
+                    } else if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() < 0 && HayUnObjetivoPesoCargado == false) {
+                        Calendar calendar = Calendar.getInstance();
+                        ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
+                        Date FechaHoy = calendar.getTime();
+                        ClaseObjetivosUsuario U;
+                        U = new ClaseObjetivosUsuario(0, 0, PesoAInsertar, 0, FechaHoy, Static.SumarRestarDias(FechaHoy, SemanasAInsertar * 7), 0);
+                        U.AgregarNuevoObjetivo(U, getActivity());
+                        ActividadAnfitriona.HomeObjetivos();
+                    } else if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() < 0 && HayUnObjetivoPesoCargado) {
+                        Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "No puede haber dos objetivos del mismo tipo", Toast.LENGTH_SHORT);
+                        toast1.setGravity(Gravity.CENTER, 0, 450);
+
+                        toast1.show();
+                    }
                 }
-            }else{
-                Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Ingrese los campos correctamente!", Toast.LENGTH_SHORT);
+            }
+
+            if (PesoIngresado.getText().length() == 0){
+                Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Ingrese un peso", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER,0,450);
 
                 toast1.show();
             }
+            if (PesoIngresado.getText().length() > 0){
+                if (Integer.parseInt(PesoIngresado.getText().toString())  < 40){
+                    Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "El peso no puede ser menor a 40 kilos", Toast.LENGTH_SHORT);
+                    toast1.setGravity(Gravity.CENTER,0,450);
+
+                    toast1.show();
+                } if (Integer.parseInt(PesoIngresado.getText().toString())  > 150){
+                    Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "El peso esta fuera del limite", Toast.LENGTH_SHORT);
+                    toast1.setGravity(Gravity.CENTER,0,450);
+
+                    toast1.show();
+                }
+            }
+
+            if (SemanasIngresadas.getText().length() == 0){
+                Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Ingrese las semanas", Toast.LENGTH_SHORT);
+                toast1.setGravity(Gravity.CENTER,0,450);
+                toast1.show();
+            }
+
+
+            if (SemanasIngresadas.getText().length() > 0){
+                if (Integer.parseInt(SemanasIngresadas.getText().toString())  < 0){
+                    Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Las semanas no pueden ser negativas", Toast.LENGTH_SHORT);
+                    toast1.setGravity(Gravity.CENTER,0,450);
+
+                    toast1.show();
+                } if (Integer.parseInt(SemanasIngresadas.getText().toString())  > 104){
+                    Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "El plazo no puede ser mayor a dos años", Toast.LENGTH_SHORT);
+                    toast1.setGravity(Gravity.CENTER,0,450);
+
+                    toast1.show();
+                }
+            }
+
+
+
         }else if(BotonPresionado.getId() ==R.id.EliminarDatosPeso){
             ClaseObjetivosUsuario U = new ClaseObjetivosUsuario();
             U.EliminarObjetivoUsuario(ActividadAnfitriona.objetivosUsuario.getIdObjetivo(), getActivity());
