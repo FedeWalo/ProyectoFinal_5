@@ -8,15 +8,14 @@
     android:gravity="center">
 
     <TextView
-        android:layout_width="350dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="16dp"
         android:id="@+id/NombreCategoria"
-        android:background="@drawable/diseno_boton_agregar_comida"
-        android:textColor="#fff"
-        android:textSize="13dp"
-        android:gravity="center"
+        android:layout_width="121dp"
+        android:layout_height="115dp"
         android:layout_margin="10dp"
-        />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/diseno_item_lista_obj_usuario"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="13dp" />
 
 </LinearLayout>

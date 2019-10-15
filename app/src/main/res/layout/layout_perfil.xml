@@ -73,13 +73,16 @@
 
     <Button
         android:id="@+id/BotonModificarDatos"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/LabelAltura"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="30dp"
-        android:text="Editar datos"/>
+        android:text="Editar datos"
+        android:textColor="#fff"
+
+        android:background="@drawable/diseno_boton_agregar_comida"/>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -77,6 +77,15 @@ public class ActividadPrincipal extends Activity {
         transacFragments.commit();
     }
 
+
+    public void HomePerfil(){
+        FragmentPerfil FrInicioPerfil;
+        FrInicioPerfil = new FragmentPerfil();
+        transacFragments = adminFragments.beginTransaction();
+        transacFragments.replace(R.id.AlojadorDeFragments,FrInicioPerfil);
+        transacFragments.commit();
+    }
+
     public void HomeObjetivos(){
         FragmentHomeObjetivos FrInicioObjetivos;
         FrInicioObjetivos = new FragmentHomeObjetivos();
@@ -119,6 +128,13 @@ public class ActividadPrincipal extends Activity {
         transacFragments.commit();
     }
 
+    public void IrAFrEditarDatosPerfil(){
+        Fragment FragmentEditarDatos;
+        FragmentEditarDatos = new FragmentEditarDatosPerfil();
+        transacFragments = adminFragments.beginTransaction();
+        transacFragments.replace(R.id.AlojadorDeFragments,FragmentEditarDatos);
+        transacFragments.commit();
+    }
 
 
     //que mierda hay que hacer aca(?
