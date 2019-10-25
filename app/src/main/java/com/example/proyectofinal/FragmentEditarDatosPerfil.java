@@ -39,10 +39,10 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
         BotonVolver.setOnClickListener(this);
 
         DatoPesoIngresado = VistaAdevolver.findViewById(R.id.IngresoPeso);
-        DatoPeso = Integer.parseInt(DatoPesoIngresado.toString());
+       // DatoPeso = Integer.parseInt(DatoPesoIngresado.getText().toString());
 
         DatoActividadIngresado = VistaAdevolver.findViewById(R.id.IngresoVecesPorSemana);
-        DatoIntActividad = Integer.parseInt(DatoActividadIngresado.toString());
+       // DatoIntActividad = Integer.parseInt(DatoActividadIngresado.toString());
 
         if( DatoIntActividad <= 1){
             DatoActividad = "bajo";
@@ -55,7 +55,7 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
         }
 
         DatoAlturaIngresado = VistaAdevolver.findViewById(R.id.IngresoAltura);
-        DatoAltura = Integer.parseInt(DatoAlturaIngresado.toString());
+     //   DatoAltura = Integer.parseInt(DatoAlturaIngresado.toString());
 
 
         return VistaAdevolver;
@@ -82,9 +82,9 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
 
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String strDate = dateFormat.format(FechaHoy);
-            ClasePerfil Objeto = new ClasePerfil(0,"Abc",DatoPeso,DatoActividad,DatoAltura,strDate);
+           // ClasePerfil Objeto = new ClasePerfil(0,"Abc",DatoPeso,DatoActividad,DatoAltura,strDate);
 
-            NuevoPerfil.InsertarNuevoPerfil(Objeto,getContext());
+         //   NuevoPerfil.InsertarNuevoPerfil(Objeto,getContext());
         }
     }
 
