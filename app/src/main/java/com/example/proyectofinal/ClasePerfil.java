@@ -15,11 +15,12 @@ import java.util.Date;
 
 public class ClasePerfil {
     private int idPerfil;
-    private String NombreUsuario;
+    private String Sexo;
     private Float Peso;
     private String NivelDeActividad;
     private Float Altura;
     private Date Fecha;
+    private String FechaBusquedad;
 
     public ClasePerfil(){
         super();
@@ -28,18 +29,19 @@ public class ClasePerfil {
     ManejadorBaseDeDatos AccesoALaBase; //Objetopara manejar los accesos a la base
     SQLiteDatabase BaseDeDatos; //Referencia a la base en si
 
-    public ClasePerfil (int idPerfilRecibido, String NombreUsuarioRecibido,Float PesoRecibido, String NivelDeActividadRecibido,Float AlturaRecibida, Date FechaRecibida) {
+    public ClasePerfil (int idPerfilRecibido,String SexoPerfilRecibido,Float PesoRecibido, String NivelDeActividadRecibido,Float AlturaRecibida, Date FechaRecibida,String FechaBusquedadRecivida) {
         this.idPerfil = idPerfilRecibido;
-        this.NombreUsuario = NombreUsuarioRecibido;
+        this.Sexo = SexoPerfilRecibido;
         this.Peso = PesoRecibido;
         this.NivelDeActividad = NivelDeActividadRecibido;
         this.Altura = AlturaRecibida;
         this.Fecha = FechaRecibida;
+        this.FechaBusquedad = FechaBusquedadRecivida;
     }
 
     public int getIdPerfil(){return idPerfil;}
 
-    public String getNombreUsuario(){return NombreUsuario;}
+    public String getSexo(){return Sexo;}
 
     public Float getPeso(){return Peso;}
 
@@ -49,32 +51,28 @@ public class ClasePerfil {
 
     public Date getFecha(){return Fecha;}
 
+    public String getFechaBusquedad(){return FechaBusquedad;}
+
     public void InsertarNuevoPerfil(ClasePerfil PerfilEnviado, Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getWritableDatabase();
 
         ContentValues NuevoDatoPerfil;
         NuevoDatoPerfil= new ContentValues();
 
-        NuevoDatoPerfil.put("idPerfil",PerfilEnviado.getIdPerfil());
-        NuevoDatoPerfil.put("NombreUsuario",PerfilEnviado.getNombreUsuario());
         NuevoDatoPerfil.put("Peso",PerfilEnviado.getPeso());
+        NuevoDatoPerfil.put("Sexo",PerfilEnviado.getSexo());
         NuevoDatoPerfil.put("NivelDeActividad",PerfilEnviado.getNivelDeActividad());
         NuevoDatoPerfil.put("Altura",PerfilEnviado.getAltura());
-
-        //obtengo la fecha actual y la inserto
-        Calendar calendar =Calendar.getInstance();
-        Date FechaHoy = calendar.getTime();
-        Timestamp FechaActual = new Timestamp(FechaHoy.getTime());
-        NuevoDatoPerfil.put("Fecha",FechaActual.toString());
+        NuevoDatoPerfil.put("Fecha",PerfilEnviado.Fecha.toString());
+        NuevoDatoPerfil.put("FechaParaBusq",FechaBusquedad);
 
         BaseDeDatos.insert("Perfil", null, NuevoDatoPerfil); //Inserto el registro
     }
 
     public ClasePerfil TraerUltimosDatosPerfil(Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getReadableDatabase();
-
         ClasePerfil UltimosDatos = new ClasePerfil();
         Cursor RegistrosLeidos;
         String SQLLectura;
@@ -83,21 +81,21 @@ public class ClasePerfil {
         RegistrosLeidos =AccesoALaBase.EjecutarConsultaLeer(SQLLectura);
         if(RegistrosLeidos.getCount()>0){
             for(int PunteroRegistro=0; PunteroRegistro<RegistrosLeidos.getCount(); PunteroRegistro++){
-                ClaseComidaConsumida ObjetoComida = new ClaseComidaConsumida();
                 RegistrosLeidos.moveToPosition(PunteroRegistro);
                 Log.d("prueba","entro a leer");
 
                 UltimosDatos.idPerfil = RegistrosLeidos.getInt(0);
-                UltimosDatos.NombreUsuario = RegistrosLeidos.getString(1);
+                UltimosDatos.Sexo =RegistrosLeidos.getString(1);
                 UltimosDatos.Peso = RegistrosLeidos.getFloat(2);
                 UltimosDatos.NivelDeActividad = RegistrosLeidos.getString(3);
                 UltimosDatos.Altura = RegistrosLeidos.getFloat(4);
                 try {
                     UltimosDatos.Fecha = Timestamp.valueOf(RegistrosLeidos.getString(5));
                 }catch (Exception e){}
+                UltimosDatos.FechaBusquedad= RegistrosLeidos.getString(6);
             }
         }else{
-            Log.d("Prueba","No hay comidas");
+            Log.d("Prueba","No hay perfiles");
             //NO HAY REGISTROS
         }
 

@@ -7,6 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
 
     public ManejadorBaseDeDatos(Context contexto, String NombreBase, SQLiteDatabase.CursorFactory fabrica, int VersionCreacion){
@@ -42,7 +48,7 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
 
 
         //Creacion tabla Usuarios
-        SQLCrearTabla = "create table Perfil(idPerfil integer primary key, NombreUsuario text, Peso integer, NivelDeActividad text, Altura integer,Fecha DATE DEFAULT CURRENT_DATE)";
+        SQLCrearTabla = "create table Perfil(idPerfil integer primary key, Sexo text, Peso integer, NivelDeActividad text, Altura integer,Fecha DATE DEFAULT CURRENT_DATE, FechaParaBusq text)";
         BaseDeDatos.execSQL(SQLCrearTabla);
 
         /*
@@ -163,6 +169,25 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
         //Comidas de categoria Lacteos
         InsertarComida(5,"QUESO",3,1,"queso","Alimento color amarillo con agujeros para permitir la respiracion.",BaseDeDatos);
         InsertarComida(5,"LECHE",2,1,"lacteo","Blanca como la nieve, alimento especial para niños en desarrollo por su cantidad de calcio.",BaseDeDatos);
+
+
+        Calendar calendar = Calendar.getInstance();
+        Date FechaHoy = calendar.getTime();
+        Timestamp FechaActual = new Timestamp(FechaHoy.getTime());
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = dateFormat.format(FechaHoy);
+
+        ContentValues PrimerDatoPerfil; //Creo un registro en memoria donde pondre los parametros
+        PrimerDatoPerfil = new ContentValues();
+        PrimerDatoPerfil.put("Sexo","HOMBRE");
+        PrimerDatoPerfil.put("Peso",0);
+        PrimerDatoPerfil.put("NivelDeActividad","BAJO");
+        PrimerDatoPerfil.put("Altura",0);
+        PrimerDatoPerfil.put("Fecha",FechaActual.toString());
+        PrimerDatoPerfil.put("FechaParaBusq",strDate);
+        BaseDeDatos.insert("Perfil", null, PrimerDatoPerfil); //Inserto el registro
+
 
     }
 

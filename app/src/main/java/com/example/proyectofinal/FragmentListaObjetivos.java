@@ -18,13 +18,42 @@ import java.util.Date;
 public class FragmentListaObjetivos extends Fragment {
     ListView ListViewListaCategorias;
     ArrayList<ClaseObjetivo> ListObjetivo;
-
+    ArrayList<ClaseObjetivosUsuario> ListObjetivoUsuario;
+    ArrayList<ClaseObjetivo> ListObjetivoAMostrar;
     public View onCreateView(LayoutInflater Inflador, ViewGroup Grupo, Bundle DatosRecibidos){
+        ListObjetivoAMostrar = new ArrayList<>();
         View VistaADevolver;
         ClaseObjetivo MisObjetivos;
         MisObjetivos = new ClaseObjetivo();
         ListObjetivo = MisObjetivos.ObtenerObjetivos(getActivity());
         VistaADevolver = Inflador.inflate(R.layout.layout_lista_objetivos,Grupo,false);
+
+        // valido que no aparezca en la lista un objetivo si ya hay uno creado
+        ClaseObjetivosUsuario MisObjetivosUsuario;
+        MisObjetivosUsuario = new ClaseObjetivosUsuario();
+        ListObjetivoUsuario =MisObjetivosUsuario.ObtenerObjetivos(getActivity());
+
+        for (ClaseObjetivosUsuario objetivo: ListObjetivoUsuario) {
+
+            if (objetivo.getTipoDeObjetivo()== 0){
+
+                for (ClaseObjetivo _objetivo: ListObjetivo) {
+                    if (_objetivo.getTipoDeObjetivo() == 0){
+                        ListObjetivo.remove(_objetivo);
+                    }
+                }
+
+            }
+            else if (objetivo.getTipoDeObjetivo()== 1){
+
+                for (ClaseObjetivo _objetivo: ListObjetivo) {
+                    if (_objetivo.getTipoDeObjetivo() == 1){
+                        ListObjetivo.remove(_objetivo);
+                    }
+                }
+
+            }
+        }
 
         AdaptadorListaaObjetivos adaptador;
         adaptador = new AdaptadorListaaObjetivos(ListObjetivo,VistaADevolver.getContext());

@@ -27,6 +27,7 @@ public class ActividadPrincipal extends Activity {
     ClaseComida _ComidaSeleccionadaEnFragmentListaDeComida;
     ClaseObjetivo _ObjetivoSeleccionadoEnFragmentAgregarNuevoObjetivo;
     ClaseObjetivosUsuario objetivosUsuario;
+    ClasePerfil PerfilActual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,7 +129,8 @@ public class ActividadPrincipal extends Activity {
         transacFragments.commit();
     }
 
-    public void IrAFrEditarDatosPerfil(){
+    public void IrAFrEditarDatosPerfil(ClasePerfil perfil){
+        PerfilActual = perfil;
         Fragment FragmentEditarDatos;
         FragmentEditarDatos = new FragmentEditarDatosPerfil();
         transacFragments = adminFragments.beginTransaction();

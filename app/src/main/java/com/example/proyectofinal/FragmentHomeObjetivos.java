@@ -10,13 +10,13 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class FragmentHomeObjetivos extends Fragment implements View.OnClickListener {
-    ArrayList<ClaseObjetivosUsuario> ListObjetivos;
+    ArrayList<ClaseObjetivo> ListObjetivos;
+    ArrayList<ClaseObjetivosUsuario> ListObjetivosUsuario;
     private GridView GridViewListObjetivos;
     Button BotonAnadirObjetivo;
     @Override
@@ -30,17 +30,31 @@ public class FragmentHomeObjetivos extends Fragment implements View.OnClickListe
         ClaseObjetivosUsuario MisObjetivos;
         MisObjetivos = new ClaseObjetivosUsuario();
 
-        BotonAnadirObjetivo.setOnClickListener(this);
         //uso el objeto miscategorias para llenar la lista
 
-        ListObjetivos =MisObjetivos.ObtenerObjetivos(getActivity());
+        ListObjetivosUsuario =MisObjetivos.ObtenerObjetivos(getActivity());
+
+        //muestro el botor de anadir dependiendo si ya estan todos los objetivos o no
+        ClaseObjetivo _MisObjetivos;
+        _MisObjetivos = new ClaseObjetivo();
+        ListObjetivos = _MisObjetivos.ObtenerObjetivos(getActivity());
+
+
+        if (ListObjetivosUsuario.size() == ListObjetivos.size()){
+            BotonAnadirObjetivo.setEnabled(false);
+            BotonAnadirObjetivo.setVisibility(View.INVISIBLE);
+        }
+        else{
+            BotonAnadirObjetivo.setOnClickListener(this);
+        }
 
         //declaro y relaciono mi objeto listview
         GridViewListObjetivos = VistaAdevolver.findViewById(R.id.ListaObjetivos);
 
         //defino e instancio el adaptador, mandandole el Arraylist y el contexto
+
         AdaptadorGrillaObjetivos adaptador;
-        adaptador= new AdaptadorGrillaObjetivos(ListObjetivos,VistaAdevolver.getContext());
+        adaptador= new AdaptadorGrillaObjetivos(ListObjetivosUsuario,VistaAdevolver.getContext());
 
         //le asigno el adaptador al listview
         GridViewListObjetivos.setAdapter(adaptador);
@@ -113,8 +127,8 @@ public class FragmentHomeObjetivos extends Fragment implements View.OnClickListe
     AdapterView.OnItemClickListener EscuchadorParaListView = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            ClaseObjetivosUsuario U = new ClaseObjetivosUsuario(ListObjetivos.get(position).getIdObjetivo(),ListObjetivos.get(position).getTipoDeObjetivo(),ListObjetivos.get(position).getMeta(),ListObjetivos.get(position).getProgreso(),ListObjetivos.get(position).getFechaDeInicio(),ListObjetivos.get(position).getFechaDeFin(),ListObjetivos.get(position).getPesoInicial());
-            if(ListObjetivos.get(position).getTipoDeObjetivo()== 0) {
+            ClaseObjetivosUsuario U = new ClaseObjetivosUsuario(ListObjetivosUsuario.get(position).getIdObjetivo(), ListObjetivosUsuario.get(position).getTipoDeObjetivo(), ListObjetivosUsuario.get(position).getMeta(), ListObjetivosUsuario.get(position).getProgreso(), ListObjetivosUsuario.get(position).getFechaDeInicio(), ListObjetivosUsuario.get(position).getFechaDeFin(), ListObjetivosUsuario.get(position).getPesoInicial());
+            if(ListObjetivosUsuario.get(position).getTipoDeObjetivo()== 0) {
                 ActividadPrincipal ActividadAnfitriona;
                 ActividadAnfitriona = (ActividadPrincipal) getActivity();
                 ActividadAnfitriona.IngresarDatosPeso(U);

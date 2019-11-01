@@ -77,7 +77,7 @@ public class ClaseComidaConsumida {
 
 
     public void InsertarComidaConsumida(ClaseComida ComidaEnviada, Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getWritableDatabase();
 
         ContentValues NuevaComidaConsumida; //Creo un registro en memoria donde pondre los parametros
@@ -105,11 +105,10 @@ public class ClaseComidaConsumida {
 
     public ArrayList<ClaseComidaConsumida> ObtenerUltimasConsumidas(Context context){
 
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getReadableDatabase();
 
-        ArrayList<ClaseComidaConsumida> ListaADevolver;
-        ListaADevolver = new ArrayList<ClaseComidaConsumida>();
+        ArrayList<ClaseComidaConsumida> ListaADevolver = new ArrayList();
         Cursor RegistrosLeidos;
         String SQLLectura;
         SQLLectura="SELECT * FROM ComidasConsumidas ORDER BY idComida DESC LIMIT 2"; //entre las commilas va lo mismo que podria ir en un stored
@@ -148,7 +147,7 @@ public class ClaseComidaConsumida {
     }
 
     public int ConsultarFitPointDelDia(Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getReadableDatabase();
 
         int CantFPConsumidos = 0;
@@ -196,7 +195,7 @@ public class ClaseComidaConsumida {
     }
 
     public int ConsultarProporcionBuenosDelDia(Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getReadableDatabase();
 
         int CantFPConsumidos = 0;
@@ -251,7 +250,7 @@ public class ClaseComidaConsumida {
 
 
     public int[] ConsultarProporcionBuenosDeLosUltimos7Dias(Context context){
-        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLfife",null,1);
+        AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
         BaseDeDatos = AccesoALaBase.getReadableDatabase();
         int[]PorcentajeBuenos=new int[7];
         int CantFPConsumidos = 0;
