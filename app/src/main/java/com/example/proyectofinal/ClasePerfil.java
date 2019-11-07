@@ -132,9 +132,9 @@ public class ClasePerfil {
 
         DatosPerfil = TraerUltimosDatosPerfil(context);
         if(DatosPerfil.Sexo ==  "Mujer"){
-            CaloriasAConsumir = 655 + (9.6f*DatosPerfil.Peso)+(1.8f*DatosPerfil.Altura)-(4.7f*DatosPerfil.Edad));//Agregar el dato de edad
+            CaloriasAConsumir = 655 + (9.6f*DatosPerfil.Peso)+(1.8f*DatosPerfil.Altura)-(4.7f*DatosPerfil.Edad);
         }else{
-            CaloriasAConsumir = 66 + (13.7f*DatosPerfil.Peso)+(5*DatosPerfil.Altura)-(6.8f*DatosPerfil.Edad));
+            CaloriasAConsumir = 66 + (13.7f*DatosPerfil.Peso)+(5*DatosPerfil.Altura)-(6.8f*DatosPerfil.Edad);
         }
 
         if(DatosPerfil.NivelDeActividad==0){
@@ -169,7 +169,7 @@ public class ClasePerfil {
 
         }
 
-        FPAConsumir = CaloriasAConsumir/50;
+        FPAConsumir = (int)CaloriasAConsumir/50;
         return FPAConsumir;
 
     }

@@ -25,6 +25,11 @@ import java.util.ArrayList;
 public class FragmentPantallaInicio extends Fragment{
     TextView CantFitPointDelDia;
     int CantFP;
+
+    TextView CantFPAConsimir;
+    int CantFPDiaObjetivo;
+    ClasePerfil objPerfil;
+
     private BarChart Grafico;
     private int[]Porcentaje=new int[7];
     private String[]Dias=new String[]{"Lun,Mar,Mie,Jue,Vie,Sab,Dom"};
@@ -32,6 +37,8 @@ public class FragmentPantallaInicio extends Fragment{
     private int[]ColoresConIdealBuenos=new int[14];
     private int ProporcionIdealBuenos;
     private int[]PorcentajeConIdeal=new int[14];
+
+
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
         View VistaAdevolver;
@@ -55,6 +62,11 @@ public class FragmentPantallaInicio extends Fragment{
         CantFitPointDelDia.setText(""+CantFP);
         Grafico=VistaAdevolver.findViewById(R.id.GraficoDeBarra);
         createCharts();
+
+        CantFPAConsimir = VistaAdevolver.findViewById(R.id.FitPointsQueFaltanConsumir);
+        CantFPDiaObjetivo = objPerfil.FitPointsAlDia(getActivity());
+        CantFPDiaObjetivo = CantFPDiaObjetivo - CantFP;
+        CantFPAConsimir.setText("RESTAN "+CantFPDiaObjetivo+" FP");
         return VistaAdevolver;
     }
 
