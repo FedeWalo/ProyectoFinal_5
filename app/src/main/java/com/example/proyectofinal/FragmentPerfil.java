@@ -13,8 +13,10 @@ public class FragmentPerfil extends Fragment implements View.OnClickListener{
     TextView SexoLayout;
     TextView PesoLayout;
     TextView ActividadLayout;
+    TextView EdadLayout;
     TextView AlturaLayout;
     ClasePerfil PerfilTraido;
+    String DatoActividad;
 
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
@@ -25,15 +27,31 @@ public class FragmentPerfil extends Fragment implements View.OnClickListener{
         PesoLayout=VistaAdevolver.findViewById(R.id.Peso);
         ActividadLayout=VistaAdevolver.findViewById(R.id.NivelDeActividad);
         AlturaLayout=VistaAdevolver.findViewById(R.id.Altura);
+        EdadLayout=VistaAdevolver.findViewById(R.id.Edad);
 
         ClasePerfil perfil = new ClasePerfil();
         PerfilTraido = perfil.TraerUltimosDatosPerfil(VistaAdevolver.getContext());
 
         SexoLayout.setText(PerfilTraido.getSexo());
         PesoLayout.setText(PerfilTraido.getPeso()+"");
-        ActividadLayout.setText(PerfilTraido.getNivelDeActividad());
+
+        if(PerfilTraido.getNivelDeActividad() == 0){
+            DatoActividad = "no definido";
+        }
+        else if( PerfilTraido.getNivelDeActividad() <= 1){
+            DatoActividad = "bajo";
+        }
+        else if ((PerfilTraido.getNivelDeActividad() > 1)&&(PerfilTraido.getNivelDeActividad() <=3)){
+            DatoActividad = "medio";
+
+        }else if(PerfilTraido.getNivelDeActividad() >3){
+            DatoActividad = "alto";
+        }
+
+        ActividadLayout.setText(DatoActividad);
         AlturaLayout.setText(PerfilTraido.getAltura()+"");
 
+        EdadLayout.setText(PerfilTraido.getEdad()+"");
         BotonEditarDatosPerfil = VistaAdevolver.findViewById(R.id.BotonModificarDatos);
         BotonEditarDatosPerfil.setOnClickListener(this);
         return VistaAdevolver;

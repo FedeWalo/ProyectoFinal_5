@@ -20,7 +20,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/barra_de_navegacion"
-        android:background="?android:attr/windowBackground"
+        app:itemTextColor="@android:color/background_light"
+        app:itemIconTint="@android:color/background_light"
         />
 
 

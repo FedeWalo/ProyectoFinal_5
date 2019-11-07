@@ -48,7 +48,7 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
 
 
         //Creacion tabla Usuarios
-        SQLCrearTabla = "create table Perfil(idPerfil integer primary key, Sexo text, Peso integer, NivelDeActividad text, Altura integer,Fecha DATE DEFAULT CURRENT_DATE, FechaParaBusq text)";
+        SQLCrearTabla = "create table Perfil(idPerfil integer primary key, Sexo text, Peso integer, NivelDeActividad interger, Altura integer,Fecha DATE DEFAULT CURRENT_DATE, FechaParaBusq text, Edad interger)";
         BaseDeDatos.execSQL(SQLCrearTabla);
 
         /*
@@ -180,12 +180,13 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
 
         ContentValues PrimerDatoPerfil; //Creo un registro en memoria donde pondre los parametros
         PrimerDatoPerfil = new ContentValues();
-        PrimerDatoPerfil.put("Sexo","HOMBRE");
+        PrimerDatoPerfil.put("Sexo","No Definido");
         PrimerDatoPerfil.put("Peso",0);
-        PrimerDatoPerfil.put("NivelDeActividad","BAJO");
+        PrimerDatoPerfil.put("NivelDeActividad",0);
         PrimerDatoPerfil.put("Altura",0);
         PrimerDatoPerfil.put("Fecha",FechaActual.toString());
         PrimerDatoPerfil.put("FechaParaBusq",strDate);
+        PrimerDatoPerfil.put("Edad", 0);
         BaseDeDatos.insert("Perfil", null, PrimerDatoPerfil); //Inserto el registro
 
 

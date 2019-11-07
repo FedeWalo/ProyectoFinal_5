@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,7 +16,7 @@ import java.util.Date;
 
 public class FragmentListaObjetivos extends Fragment {
     ListView ListViewListaCategorias;
-    ArrayList<ClaseObjetivo> ListObjetivo;
+    ArrayList<ClaseObjetivo> ListObjetivos;
     ArrayList<ClaseObjetivosUsuario> ListObjetivoUsuario;
     ArrayList<ClaseObjetivo> ListObjetivoAMostrar;
     public View onCreateView(LayoutInflater Inflador, ViewGroup Grupo, Bundle DatosRecibidos){
@@ -25,7 +24,7 @@ public class FragmentListaObjetivos extends Fragment {
         View VistaADevolver;
         ClaseObjetivo MisObjetivos;
         MisObjetivos = new ClaseObjetivo();
-        ListObjetivo = MisObjetivos.ObtenerObjetivos(getActivity());
+        ListObjetivos = MisObjetivos.ObtenerObjetivos(getActivity());
         VistaADevolver = Inflador.inflate(R.layout.layout_lista_objetivos,Grupo,false);
 
         // valido que no aparezca en la lista un objetivo si ya hay uno creado
@@ -37,26 +36,30 @@ public class FragmentListaObjetivos extends Fragment {
 
             if (objetivo.getTipoDeObjetivo()== 0){
 
-                for (ClaseObjetivo _objetivo: ListObjetivo) {
-                    if (_objetivo.getTipoDeObjetivo() == 0){
-                        ListObjetivo.remove(_objetivo);
+                for (ClaseObjetivo _objetivo: ListObjetivos) {
+                    if (_objetivo.getTipoDeObjetivo() == 1){
+                        ListObjetivoAMostrar.add(_objetivo);
                     }
                 }
 
             }
             else if (objetivo.getTipoDeObjetivo()== 1){
 
-                for (ClaseObjetivo _objetivo: ListObjetivo) {
-                    if (_objetivo.getTipoDeObjetivo() == 1){
-                        ListObjetivo.remove(_objetivo);
+                for (ClaseObjetivo _objetivo: ListObjetivos) {
+                    if (_objetivo.getTipoDeObjetivo() == 0){
+                        ListObjetivoAMostrar.add(_objetivo);
                     }
                 }
 
             }
         }
 
+        if (ListObjetivoAMostrar.size() == 0){
+            ListObjetivoAMostrar = ListObjetivos;
+        }
+
         AdaptadorListaaObjetivos adaptador;
-        adaptador = new AdaptadorListaaObjetivos(ListObjetivo,VistaADevolver.getContext());
+        adaptador = new AdaptadorListaaObjetivos(ListObjetivoAMostrar,VistaADevolver.getContext());
 
         ListViewListaCategorias = VistaADevolver.findViewById(R.id.ListaObjetivos);
         //le asigno el adaptador al listview
@@ -117,7 +120,7 @@ public class FragmentListaObjetivos extends Fragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Date fecha = new Date();
             ClaseObjetivosUsuario U = new ClaseObjetivosUsuario(-1,0,0,0,fecha,fecha,0);
-            if(ListObjetivo.get(position).getTipoDeObjetivo()== 0) {
+            if(ListObjetivos.get(position).getTipoDeObjetivo()== 0) {
                 ActividadPrincipal ActividadAnfitriona;
                 ActividadAnfitriona = (ActividadPrincipal) getActivity();
                 ActividadAnfitriona.IngresarDatosPeso(U);

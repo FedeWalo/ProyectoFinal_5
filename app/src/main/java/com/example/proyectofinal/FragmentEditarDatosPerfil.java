@@ -26,12 +26,13 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
     EditText DatoActividadIngresado;
     EditText DatoAlturaIngresado;
     EditText DatoSexoIngresado;
+    EditText DatoEdadIngresa;
     float DatoPeso;
-    String DatoActividad;
     float DatoAltura;
     int DatoIntActividad;
     int idRegistroDatosPerfil;
     String DatoSexo;
+    int DatoEdad;
 
 
     @Override
@@ -52,14 +53,14 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
         DatoActividadIngresado = VistaAdevolver.findViewById(R.id.IngresoVecesPorSemana);
         DatoAlturaIngresado = VistaAdevolver.findViewById(R.id.IngresoAltura);
         DatoSexoIngresado = VistaAdevolver.findViewById(R.id.ingresoSexo);
+        DatoEdadIngresa = VistaAdevolver.findViewById(R.id.ingresoEdad);
 
         if (ActividadAnfitriona.PerfilActual.getIdPerfil() != 0){
             DatoPesoIngresado.setText(ActividadAnfitriona.PerfilActual.getPeso()+"");
-            DatoActividadIngresado.setText(ActividadAnfitriona.PerfilActual.getNivelDeActividad());
+            DatoActividadIngresado.setText(ActividadAnfitriona.PerfilActual.getNivelDeActividad()+"");
             DatoAlturaIngresado.setText(ActividadAnfitriona.PerfilActual.getAltura()+"");
             DatoSexoIngresado.setText(ActividadAnfitriona.PerfilActual.getSexo());
-            DatoSexoIngresado.setEnabled(false);
-            DatoAlturaIngresado.setEnabled(false);
+            DatoEdadIngresa.setText(ActividadAnfitriona.PerfilActual.getEdad()+"");
         }
 
         return VistaAdevolver;
@@ -77,20 +78,11 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
             ActividadAnfitriona.HomePerfil();
         }
         if(BotonPresionado.getId() ==R.id.ConfirmarEdicionDatosPerfil) {
-            if (DatoPesoIngresado.getText().length() > 0 && DatoActividadIngresado.getText().length() > 0 && DatoAlturaIngresado.getText().length() > 0 && DatoSexoIngresado.getText().length() > 0) {
+            if (DatoPesoIngresado.getText().length() > 0 && DatoActividadIngresado.getText().length() > 0 && DatoAlturaIngresado.getText().length() > 0 && DatoSexoIngresado.getText().length() > 0 && DatoEdadIngresa.getText().length() > 0) {
                 DatoSexo = DatoSexoIngresado.getText().toString();
-                DatoPeso = Integer.parseInt(DatoPesoIngresado.getText().toString());
+                DatoPeso = Float.parseFloat(DatoPesoIngresado.getText().toString());
                 DatoIntActividad = Integer.parseInt(DatoActividadIngresado.getText().toString());
-
-                if( DatoIntActividad <= 1){
-                    DatoActividad = "bajo";
-                }
-                else if ((DatoIntActividad > 1)&&(DatoIntActividad<=3)){
-                    DatoActividad = "medio";
-
-                }else if(DatoIntActividad>3){
-                    DatoActividad = "alto";
-                }
+                DatoEdad = Integer.parseInt(DatoEdadIngresa.getText().toString());
 
                 DatoAltura = Integer.parseInt(DatoAlturaIngresado.getText().toString());
                 ClasePerfil NuevoPerfil;
@@ -102,7 +94,7 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
 
                 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 String strDate = dateFormat.format(FechaHoy);
-                 ClasePerfil Objeto = new ClasePerfil(0,DatoSexo,DatoPeso,DatoActividad,DatoAltura,FechaActual,strDate);
+                 ClasePerfil Objeto = new ClasePerfil(0,DatoSexo,DatoPeso,DatoIntActividad,DatoAltura,FechaActual,strDate,DatoEdad);
 
                    NuevoPerfil.InsertarNuevoPerfil(Objeto,ActividadAnfitriona);
             }

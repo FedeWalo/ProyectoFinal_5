@@ -17,10 +17,11 @@ public class ClasePerfil {
     private int idPerfil;
     private String Sexo;
     private Float Peso;
-    private String NivelDeActividad;
+    private int NivelDeActividad;
     private Float Altura;
     private Date Fecha;
     private String FechaBusquedad;
+    private int Edad;
 
     public ClasePerfil(){
         super();
@@ -29,14 +30,15 @@ public class ClasePerfil {
     ManejadorBaseDeDatos AccesoALaBase; //Objetopara manejar los accesos a la base
     SQLiteDatabase BaseDeDatos; //Referencia a la base en si
 
-    public ClasePerfil (int idPerfilRecibido,String SexoPerfilRecibido,Float PesoRecibido, String NivelDeActividadRecibido,Float AlturaRecibida, Date FechaRecibida,String FechaBusquedadRecivida) {
+    public ClasePerfil (int idPerfilRecibido,String SexoPerfilRecibido,Float PesoRecibido, int NivelDeActividadRecibido,Float AlturaRecibida, Date FechaRecibida,String FechaBusquedadRecibida, int EdadRecibida) {
         this.idPerfil = idPerfilRecibido;
         this.Sexo = SexoPerfilRecibido;
         this.Peso = PesoRecibido;
         this.NivelDeActividad = NivelDeActividadRecibido;
         this.Altura = AlturaRecibida;
         this.Fecha = FechaRecibida;
-        this.FechaBusquedad = FechaBusquedadRecivida;
+        this.FechaBusquedad = FechaBusquedadRecibida;
+        this.Edad = EdadRecibida;
     }
 
     public int getIdPerfil(){return idPerfil;}
@@ -45,13 +47,15 @@ public class ClasePerfil {
 
     public Float getPeso(){return Peso;}
 
-    public String getNivelDeActividad(){return NivelDeActividad;}
+    public int getNivelDeActividad(){return NivelDeActividad;}
 
     public Float getAltura(){return Altura;}
 
     public Date getFecha(){return Fecha;}
 
     public String getFechaBusquedad(){return FechaBusquedad;}
+
+    public int getEdad(){return Edad;}
 
     public void InsertarNuevoPerfil(ClasePerfil PerfilEnviado, Context context){
         AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
@@ -66,6 +70,7 @@ public class ClasePerfil {
         NuevoDatoPerfil.put("Altura",PerfilEnviado.getAltura());
         NuevoDatoPerfil.put("Fecha",PerfilEnviado.Fecha.toString());
         NuevoDatoPerfil.put("FechaParaBusq",FechaBusquedad);
+        NuevoDatoPerfil.put("Edad",PerfilEnviado.getEdad());
 
         BaseDeDatos.insert("Perfil", null, NuevoDatoPerfil); //Inserto el registro
     }
@@ -87,12 +92,13 @@ public class ClasePerfil {
                 UltimosDatos.idPerfil = RegistrosLeidos.getInt(0);
                 UltimosDatos.Sexo =RegistrosLeidos.getString(1);
                 UltimosDatos.Peso = RegistrosLeidos.getFloat(2);
-                UltimosDatos.NivelDeActividad = RegistrosLeidos.getString(3);
+                UltimosDatos.NivelDeActividad = RegistrosLeidos.getInt(3);
                 UltimosDatos.Altura = RegistrosLeidos.getFloat(4);
                 try {
                     UltimosDatos.Fecha = Timestamp.valueOf(RegistrosLeidos.getString(5));
                 }catch (Exception e){}
                 UltimosDatos.FechaBusquedad= RegistrosLeidos.getString(6);
+                UltimosDatos.Edad = RegistrosLeidos.getInt(7);
             }
         }else{
             Log.d("Prueba","No hay perfiles");
@@ -102,4 +108,69 @@ public class ClasePerfil {
         return UltimosDatos;
     }
 
+
+    int FitPointsAlDia(Context context){
+        float CaloriasAConsumir;
+        int FPAConsumir;
+        ArrayList<ClaseObjetivosUsuario> objetivos = new ArrayList<ClaseObjetivosUsuario>();
+        ClasePerfil DatosPerfil = new ClasePerfil();
+        ClaseObjetivosUsuario Objetivo = new ClaseObjetivosUsuario();
+        ClaseObjetivosUsuario objetivosUsuario = new ClaseObjetivosUsuario();
+
+        objetivos = Objetivo.ObtenerObjetivos(context);
+
+        for (ClaseObjetivosUsuario objetivo: objetivos) {
+
+            if (objetivo.getTipoDeObjetivo()== 0){
+
+                objetivosUsuario = objetivo;
+
+            }
+        }
+
+
+
+        DatosPerfil = TraerUltimosDatosPerfil(context);
+        if(DatosPerfil.Sexo ==  "Mujer"){
+            CaloriasAConsumir = 655 + (9.6f*DatosPerfil.Peso)+(1.8f*DatosPerfil.Altura)-(4.7f*DatosPerfil.Edad));//Agregar el dato de edad
+        }else{
+            CaloriasAConsumir = 66 + (13.7f*DatosPerfil.Peso)+(5*DatosPerfil.Altura)-(6.8f*DatosPerfil.Edad));
+        }
+
+        if(DatosPerfil.NivelDeActividad==0){
+            CaloriasAConsumir = CaloriasAConsumir*1.2f;
+        }
+        else if((DatosPerfil.NivelDeActividad>=1)&&(DatosPerfil.NivelDeActividad<=2)){
+            CaloriasAConsumir = CaloriasAConsumir*1.375f;
+        }
+        else if((DatosPerfil.NivelDeActividad>=3)&&(DatosPerfil.NivelDeActividad<=5)){
+            CaloriasAConsumir = CaloriasAConsumir*1.2f;
+        }
+        else if((DatosPerfil.NivelDeActividad>=6)&&(DatosPerfil.NivelDeActividad<=7)){
+            CaloriasAConsumir = CaloriasAConsumir*1.2f;
+        }
+        else{
+            CaloriasAConsumir = CaloriasAConsumir*1.2f;
+        }
+
+        if(objetivosUsuario != null){
+            //Logica si quiere aumentar o bajar de peso
+
+            if(objetivosUsuario.getMeta()>DatosPerfil.Peso){
+                float kilosAAumentar = objetivosUsuario.getMeta()-DatosPerfil.Peso;
+                float caloriasExtras = (kilosAAumentar*7000)/Integer.parseInt(objetivosUsuario.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7;
+                CaloriasAConsumir = CaloriasAConsumir + caloriasExtras;
+            }
+            else{
+                float kilosABajar = DatosPerfil.Peso - objetivosUsuario.getMeta();
+                float caloriasMenos = (kilosABajar*7000)/Integer.parseInt(objetivosUsuario.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7;
+                CaloriasAConsumir = CaloriasAConsumir - caloriasMenos;
+            }
+
+        }
+
+        FPAConsumir = CaloriasAConsumir/50;
+        return FPAConsumir;
+
+    }
 }
