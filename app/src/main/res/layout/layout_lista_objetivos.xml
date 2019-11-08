@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
     android:background="@drawable/fondo">
 
+<<<<<<< HEAD
         <ListView
             android:id="@+id/ListaObjetivos"
             android:layout_width="380dp"
@@ -22,5 +23,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.345" />
+=======
+    <Button
+        android:id="@+id/VolverAHomeObjetivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ListaObjetivos"
+        android:layout_width="383dp"
+        android:layout_height="590dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#fff"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
 
     </android.support.constraint.ConstraintLayout>

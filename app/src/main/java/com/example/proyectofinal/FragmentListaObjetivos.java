@@ -8,24 +8,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class FragmentListaObjetivos extends Fragment {
+public class FragmentListaObjetivos extends Fragment implements View.OnClickListener{
     ListView ListViewListaCategorias;
     ArrayList<ClaseObjetivo> ListObjetivos;
     ArrayList<ClaseObjetivosUsuario> ListObjetivoUsuario;
     ArrayList<ClaseObjetivo> ListObjetivoAMostrar;
+    Button BotonVolver;
     public View onCreateView(LayoutInflater Inflador, ViewGroup Grupo, Bundle DatosRecibidos){
         ListObjetivoAMostrar = new ArrayList<>();
         View VistaADevolver;
+        VistaADevolver = Inflador.inflate(R.layout.layout_lista_objetivos,Grupo,false);
+        //instancio el boton
+        BotonVolver = VistaADevolver.findViewById(R.id.VolverAHomeObjetivos);
         ClaseObjetivo MisObjetivos;
         MisObjetivos = new ClaseObjetivo();
         ListObjetivos = MisObjetivos.ObtenerObjetivos(getActivity());
-        VistaADevolver = Inflador.inflate(R.layout.layout_lista_objetivos,Grupo,false);
 
         // valido que no aparezca en la lista un objetivo si ya hay uno creado
         ClaseObjetivosUsuario MisObjetivosUsuario;
@@ -66,6 +70,7 @@ public class FragmentListaObjetivos extends Fragment {
         ListViewListaCategorias.setAdapter(adaptador);
 
         ListViewListaCategorias.setOnItemClickListener(EscuchadorParaListView);
+        BotonVolver.setOnClickListener(this);
         return VistaADevolver;
     }
 
@@ -133,4 +138,15 @@ public class FragmentListaObjetivos extends Fragment {
         }
     };
 
+
+    @Override
+    public void onClick(View view){
+        ActividadPrincipal ActividadAnfitriona;
+        ActividadAnfitriona = (ActividadPrincipal) getActivity();
+        Button BotonPresionado;
+        BotonPresionado= (Button)view;
+        if(BotonPresionado.getId() ==R.id.VolverAHomeObjetivos) {
+            ActividadAnfitriona.HomeObjetivos();
+        }
+    }
 }

@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +15,26 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
-public class FragmentListaDeCategoriasComida extends Fragment  {
+public class FragmentListaDeCategoriasComida extends Fragment implements View.OnClickListener {
     ArrayList<ClaseCategoriasDieta> listCategorias;
-    ArrayAdapter<String> Adaptador;
+    Button BotonVolver;
     ListView ListViewListaCategorias;
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
         View VistaAdevolver;
         VistaAdevolver = infladorDeLayouts.inflate(R.layout.layout_lista_categorias_dieta,GrupoDeLaVista,false);
+
+        //instancio el boton
+        BotonVolver = VistaAdevolver.findViewById(R.id.VolverAHomeCategoria);
         ActividadPrincipal ActividadAnfitriona;
         ActividadAnfitriona = (ActividadPrincipal) getActivity();
 
@@ -44,6 +54,7 @@ public class FragmentListaDeCategoriasComida extends Fragment  {
         ListViewListaCategorias.setAdapter(adaptador);
 
         ListViewListaCategorias.setOnItemClickListener(EscuchadorParaListView);
+        BotonVolver.setOnClickListener(this);
         return VistaAdevolver;
     }
 
@@ -105,7 +116,16 @@ public class FragmentListaDeCategoriasComida extends Fragment  {
         }
     };
 
-
+    @Override
+    public void onClick(View view){
+        ActividadPrincipal ActividadAnfitriona;
+        ActividadAnfitriona = (ActividadPrincipal) getActivity();
+        Button BotonPresionado;
+        BotonPresionado= (Button)view;
+        if(BotonPresionado.getId() ==R.id.VolverAHomeCategoria) {
+            ActividadAnfitriona.HomeDieta();
+        }
+    }
 
 
 }
