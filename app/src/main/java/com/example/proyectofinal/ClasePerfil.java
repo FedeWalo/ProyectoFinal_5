@@ -69,7 +69,7 @@ public class ClasePerfil {
         NuevoDatoPerfil.put("NivelDeActividad",PerfilEnviado.getNivelDeActividad());
         NuevoDatoPerfil.put("Altura",PerfilEnviado.getAltura());
         NuevoDatoPerfil.put("Fecha",PerfilEnviado.Fecha.toString());
-        NuevoDatoPerfil.put("FechaParaBusq",FechaBusquedad);
+        NuevoDatoPerfil.put("FechaParaBusq",PerfilEnviado.getFechaBusquedad());
         NuevoDatoPerfil.put("Edad",PerfilEnviado.getEdad());
 
         BaseDeDatos.insert("Perfil", null, NuevoDatoPerfil); //Inserto el registro
