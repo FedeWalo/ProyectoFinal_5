@@ -129,7 +129,7 @@ public class ClasePerfil {
         }
         ClasePerfil perfil = new ClasePerfil();
         DatosPerfil = perfil.TraerUltimosDatosPerfil(context);
-        if(DatosPerfil.Sexo ==  "Mujer"){
+        if(DatosPerfil.Sexo ==  "Femenino"){
             CaloriasAConsumir = 655 + (9.6f*DatosPerfil.Peso)+(1.8f*DatosPerfil.Altura)-(4.7f*DatosPerfil.Edad);
         }else{
             CaloriasAConsumir = 66 + (13.7f*DatosPerfil.Peso)+(5*DatosPerfil.Altura)-(6.8f*DatosPerfil.Edad);
