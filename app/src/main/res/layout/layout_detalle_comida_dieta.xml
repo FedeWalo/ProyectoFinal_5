@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
 
     <Button
         android:id="@+id/BotonVolverAInicio"
@@ -41,7 +42,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Nombre Comida"
-        android:textColor="#090C1B"
+        android:textColor="#fff"
         android:textSize="34dp"
         app:layout_constraintBottom_toTopOf="@+id/Boton_FrDetalleComida"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TituloComida"
         app:layout_constraintVertical_bias="0.0"
-        android:textColor="#090C1B"/>
+        android:textColor="#fff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -82,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FitPoint"
         app:layout_constraintVertical_bias="0.0"
-        android:textColor="#090C1B"/>
+        android:textColor="#fff"/>
 
     <TextView
         android:id="@+id/DetalleComida"
@@ -93,7 +94,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Este texto va a tener detalles de la comida como calorias, tamaño asdas hd gd g "
-        android:textColor="#090C1B"
+        android:textColor="#fff"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/Boton_FrDetalleComida"
         app:layout_constraintEnd_toEndOf="parent"

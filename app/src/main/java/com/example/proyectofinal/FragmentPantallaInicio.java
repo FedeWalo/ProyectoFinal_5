@@ -35,7 +35,7 @@ public class FragmentPantallaInicio extends Fragment{
     private BarChart Grafico;
     private int[]Porcentaje=new int[7];
     private String[]Dias=new String[]{"Lun,Mar,Mie,Jue,Vie,Sab,Dom"};
-    private int[]Colores=new int[]{Color.DKGRAY,Color.GREEN,Color.YELLOW,Color.BLUE,Color.RED,Color.CYAN,Color.BLACK};
+    private int[]Colores=new int[]{Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE};
     private int[]ColoresConIdealBuenos=new int[14];
     private int ProporcionIdealBuenos;
     private int[]PorcentajeConIdeal=new int[14];
@@ -57,7 +57,7 @@ public class FragmentPantallaInicio extends Fragment{
 
         if (ProporcionIdealBuenos> 0) {
             PorcentajeConIdeal = new int[]{ProporcionIdealBuenos,Porcentaje[0],ProporcionIdealBuenos,Porcentaje[1],ProporcionIdealBuenos,Porcentaje[2],ProporcionIdealBuenos,Porcentaje[3],ProporcionIdealBuenos,Porcentaje[4],ProporcionIdealBuenos,Porcentaje[5],ProporcionIdealBuenos,Porcentaje[6]};
-            ColoresConIdealBuenos = new int []{Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA,Color.DKGRAY,Color.MAGENTA};
+            ColoresConIdealBuenos = new int []{Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA,Color.WHITE,Color.MAGENTA};
         }
 
         CantFitPointDelDia = VistaAdevolver.findViewById(R.id.FitPointsConsumidos);
@@ -93,7 +93,7 @@ public class FragmentPantallaInicio extends Fragment{
         return Grafico;
     }
 
-    private void legend(BarChart Grafico){
+   /* private void legend(BarChart Grafico){
         Legend legend=Grafico.getLegend();
         legend.setForm(Legend.LegendForm.CIRCLE);
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
@@ -106,7 +106,7 @@ public class FragmentPantallaInicio extends Fragment{
             Datos.add(Dato);
         }
         legend.setCustom(Datos);
-    }
+    }*/
 
     private ArrayList<BarEntry>getBarEntries() {
         ArrayList<BarEntry> Datos=new ArrayList<>();
@@ -135,7 +135,7 @@ public class FragmentPantallaInicio extends Fragment{
     }
 
     public void createCharts(){
-        Grafico=getSameChart(Grafico,"Proporcion",Color.RED,Color.TRANSPARENT,1000);
+       // Grafico=getSameChart(Grafico,"Proporcion",Color.RED,Color.TRANSPARENT,1000);
         Grafico.setData(getBarData());
         Grafico.invalidate();
         ejex(Grafico.getXAxis());
