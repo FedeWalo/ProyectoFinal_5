@@ -1,6 +1,7 @@
 package com.example.proyectofinal;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ public class FragmentPantallaInicio extends Fragment{
     TextView CantFPAConsimir;
     int CantFPDiaObjetivo;
     ClasePerfil objPerfil;
+    ClasePerfil perfil;
 
     private BarChart Grafico;
     private int[]Porcentaje=new int[7];
@@ -46,6 +48,7 @@ public class FragmentPantallaInicio extends Fragment{
 
         ClaseObjetivosUsuario Objetivo;
         Objetivo = new ClaseObjetivosUsuario();
+        objPerfil = new ClasePerfil();
         ClaseComidaConsumida comidaConsumida;
         comidaConsumida = new ClaseComidaConsumida();
 
@@ -64,9 +67,20 @@ public class FragmentPantallaInicio extends Fragment{
         createCharts();
 
         CantFPAConsimir = VistaAdevolver.findViewById(R.id.FitPointsQueFaltanConsumir);
-        CantFPDiaObjetivo = objPerfil.FitPointsAlDia(getActivity());
-        CantFPDiaObjetivo = CantFPDiaObjetivo - CantFP;
-        CantFPAConsimir.setText("RESTAN "+CantFPDiaObjetivo+" FP");
+
+        //traigo los datos del perfil
+        perfil =objPerfil.TraerUltimosDatosPerfil(getActivity());
+
+        // me fijo si cargue alguno
+        if(perfil.getIdPerfil() != 0) {
+            CantFPDiaObjetivo = objPerfil.FitPointsAlDia(getActivity());
+            CantFPDiaObjetivo = CantFPDiaObjetivo - CantFP;
+            CantFPAConsimir.setText("RESTAN "+CantFPDiaObjetivo+" FP");
+        }
+        else {
+            CantFPAConsimir.setVisibility(View.INVISIBLE);
+        }
+
         return VistaAdevolver;
     }
 

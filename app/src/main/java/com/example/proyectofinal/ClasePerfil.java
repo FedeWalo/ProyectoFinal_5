@@ -112,11 +112,11 @@ public class ClasePerfil {
     int FitPointsAlDia(Context context){
         float CaloriasAConsumir;
         int FPAConsumir;
-        ArrayList<ClaseObjetivosUsuario> objetivos = new ArrayList<ClaseObjetivosUsuario>();
-        ClasePerfil DatosPerfil = new ClasePerfil();
+        ArrayList<ClaseObjetivosUsuario> objetivos;
+        ClasePerfil DatosPerfil;
         ClaseObjetivosUsuario Objetivo = new ClaseObjetivosUsuario();
-        ClaseObjetivosUsuario objetivosUsuario = new ClaseObjetivosUsuario();
-
+        ClaseObjetivosUsuario objetivosUsuario;
+        objetivosUsuario = null;
         objetivos = Objetivo.ObtenerObjetivos(context);
 
         for (ClaseObjetivosUsuario objetivo: objetivos) {
@@ -127,10 +127,8 @@ public class ClasePerfil {
 
             }
         }
-
-
-
-        DatosPerfil = TraerUltimosDatosPerfil(context);
+        ClasePerfil perfil = new ClasePerfil();
+        DatosPerfil = perfil.TraerUltimosDatosPerfil(context);
         if(DatosPerfil.Sexo ==  "Mujer"){
             CaloriasAConsumir = 655 + (9.6f*DatosPerfil.Peso)+(1.8f*DatosPerfil.Altura)-(4.7f*DatosPerfil.Edad);
         }else{
@@ -155,21 +153,21 @@ public class ClasePerfil {
 
         if(objetivosUsuario != null){
             //Logica si quiere aumentar o bajar de peso
-
-            if(objetivosUsuario.getMeta()>DatosPerfil.Peso){
+            float objetivo = objetivosUsuario.getMeta();
+            if(Float.compare(objetivo,DatosPerfil.Peso) > 0){
                 float kilosAAumentar = objetivosUsuario.getMeta()-DatosPerfil.Peso;
-                float caloriasExtras = (kilosAAumentar*7000)/Integer.parseInt(objetivosUsuario.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7;
+                float caloriasExtras = (kilosAAumentar*7000)/(Integer.parseInt(Objetivo.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7);
                 CaloriasAConsumir = CaloriasAConsumir + caloriasExtras;
             }
-            else{
+            else if (Float.compare(objetivo,DatosPerfil.Peso) < 0){
                 float kilosABajar = DatosPerfil.Peso - objetivosUsuario.getMeta();
-                float caloriasMenos = (kilosABajar*7000)/Integer.parseInt(objetivosUsuario.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7;
+                float caloriasMenos = (kilosABajar*7000)/(Integer.parseInt(Objetivo.ObtenerDiferenciaDeSemanas(objetivosUsuario.getFechaDeInicio(),objetivosUsuario.getFechaDeFin()))*7);
                 CaloriasAConsumir = CaloriasAConsumir - caloriasMenos;
             }
 
         }
 
-        FPAConsumir = (int)CaloriasAConsumir/50;
+        FPAConsumir = (int)CaloriasAConsumir/30;
         return FPAConsumir;
 
     }

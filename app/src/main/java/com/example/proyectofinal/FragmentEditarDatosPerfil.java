@@ -84,7 +84,7 @@ public class FragmentEditarDatosPerfil extends Fragment implements View.OnClickL
                 DatoIntActividad = Integer.parseInt(DatoActividadIngresado.getText().toString());
                 DatoEdad = Integer.parseInt(DatoEdadIngresa.getText().toString());
 
-                DatoAltura = Integer.parseInt(DatoAlturaIngresado.getText().toString());
+                DatoAltura = Float.parseFloat(DatoAlturaIngresado.getText().toString());
                 ClasePerfil NuevoPerfil;
                 NuevoPerfil = new ClasePerfil();
 
