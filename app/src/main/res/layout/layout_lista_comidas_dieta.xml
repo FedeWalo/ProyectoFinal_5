@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="10">
+    android:weightSum="10"
+    android:background="@drawable/fonodob">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,5 +26,5 @@
         android:columnWidth="135dp"
         android:gravity="center"
         android:numColumns="auto_fit"
-        android:textColor="#fff"/>
+    />
 </LinearLayout>
