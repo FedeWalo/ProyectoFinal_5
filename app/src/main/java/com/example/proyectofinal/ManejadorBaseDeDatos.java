@@ -143,7 +143,11 @@ public class ManejadorBaseDeDatos extends SQLiteOpenHelper {
         InsertarComida(1,"KIWI",1,1,"kiwi","Es originaria de una gran área de China, sobre todo de los bosques del valle del río Yangtsé. Introducida en Nueva Zelanda en 1904.",BaseDeDatos);
         InsertarComida(1,"ZANAHORIA",1,1,"zanahoria", "una roseta de hojas en primavera y verano, mientras desarrolla la gruesa raíz napiforme.",BaseDeDatos);
         InsertarComida(1,"ANANA",2,1,"anana", "es una planta perenne de la familia de las bromeliáceas, nativa de América del Sur. Esta especie, de escaso porte y con hojas duras y lanceoladas desde la cola hasta 1 m de largo",BaseDeDatos);
+<<<<<<< HEAD
         InsertarComida(1,"ARANDANOS",1,1,"arandano", "son blancos al principio y a medida que van madurando se tornan rojizo-purpúreos para convertirse en azules cuando están completamente maduros. ",BaseDeDatos);
+=======
+        InsertarComida(1,"ARANDANOS",1,1,"arandano", "son blancos al principio y a medida que van madurando se tornan rojizo-purpúreos para convertirse en azules cuando están completamente maduros. Por su dulce sabor se utilizan para elaborar, mermeladas, vinos, pasteles y diversos platos dulces.",BaseDeDatos);
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         InsertarComida(1,"CIRUELA",1,1,"ciruela", "El principal componente de las ciruelas es el agua, seguido de los hidratos de carbono, entre los que destaca la presencia de sorbitol, de leve acción laxante.",BaseDeDatos);
         InsertarComida(1,"LIMON",1,1,"limon", " se emplean fundamentalmente para aderezar o realizar el sabor de otras frutas o platos y preparaciones culinarias.",BaseDeDatos);
         InsertarComida(1,"MANDARINA",1,1,"mandarina", "La mandarina es el fruto del mandarino, árbol que pertenece a la familia de las Rutáceas, con características similares al naranjo, aunque más pequeño y delicado. E",BaseDeDatos);

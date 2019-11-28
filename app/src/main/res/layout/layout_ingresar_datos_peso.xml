@@ -19,8 +19,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="#fff"/>
+=======
+        android:textColor="#fff"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 
     <EditText
         android:id="@+id/IngresoPeso"
@@ -32,8 +37,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Pregunta1"
+<<<<<<< HEAD
         android:inputType="number"
         android:textColor="#fff"/>
+=======
+        android:textColor="#fff"
+        android:inputType="number" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 
     <TextView
         android:id="@+id/Pregunta2"
@@ -46,6 +56,7 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
+        android:textColor="#fff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IngresoPeso"
         android:textColor="#fff"/>
@@ -61,8 +72,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Pregunta2"
+<<<<<<< HEAD
         android:inputType="number"
         android:textColor="#fff"/>
+=======
+        android:textColor="#fff"
+        android:inputType="number"/>
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 
     <Button
         android:id="@+id/ConfirmarDatosPeso"

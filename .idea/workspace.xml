@@ -13,12 +13,80 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_PhilJay_MPAndroidChart_v3_1_0_alpha_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_PhilJay_MPAndroidChart_v3_1_0_alpha_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_editar_datos_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_editar_datos_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_peso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_peso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_comidas_dieta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_comidas_dieta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_inicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_inicio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeCategoriasComida.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeCategoriasComida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" afterDir="false" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +97,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_27" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -39,7 +107,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
+=======
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_comidas_dieta.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+=======
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentEditarDatosPerfil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -47,11 +135,13 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPerfil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -59,6 +149,71 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeCategoriasComida.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="118" column="3" selection-start-line="118" selection-start-column="3" selection-end-line="127" selection-end-column="5" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
             </state>
           </provider>
         </entry>
@@ -84,19 +239,54 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-v24/diseno_boton_agregar_comida.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/diseno_item_lista_obj_usuario.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/diseno_item_listview_objetivos_usuario.xml" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseComida.java" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseComidaConsumida.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseObjetivo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentHomeObjetivos.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ActividadPrincipal.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/barra_de_navegacion.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/actividad_principal.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPerfil.java" />
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPerfil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentEditarDatosPerfil.java" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseObjetivosUsuario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeCategoriasComida.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClasePerfil.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_peso.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml" />
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_inicio.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_peso.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_editar_datos_perfil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_comidas_dieta.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java" />
+=======
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml" />
@@ -105,6 +295,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_inicio.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseComida.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentHomeDieta.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml" />
@@ -119,6 +310,14 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+=======
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="y" value="22" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -127,24 +326,74 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+=======
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="proyectofinal" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="ProyectoFinal_5" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_28" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-11-28T13:13:48.315Z" />
+=======
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_27" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-11-08T02:33:44.666Z" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="C:/AndroidSDK" />
     <property name="device.picker.selection" value="Pixel_API_28" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Compumar\Desktop\ProyectoFinal_5\app\src\main\res\drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
@@ -245,12 +494,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+=======
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="1" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4990619" visible="true" weight="0.2360515" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4990619" visible="true" weight="0.2639676" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.50093806" side_tool="true" weight="0.32980332" />
       <window_info id="Image Layers" order="5" />
@@ -259,12 +516,24 @@
       <window_info id="Resources Explorer" order="8" weight="0.3297568" />
       <window_info anchor="bottom" id="Logcat" order="0" weight="0.32891566" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.32891566" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Android Profiler" order="2" weight="0.32891566" />
+=======
       <window_info anchor="bottom" id="Android Profiler" order="2" weight="0.3287858" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41084337" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.3313253" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32771084" />
       <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32650602" />
+=======
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41200545" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.33151433" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3287858" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.092362344" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.3297568" />
@@ -404,12 +673,15 @@
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+<<<<<<< HEAD
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentEditarDatosPerfil.java</url>
           <line>148</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+=======
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -418,10 +690,19 @@
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseCategoriasDieta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+=======
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
     </entry>
@@ -432,11 +713,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cereales.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/barra_de_navegacion.xml">
       <provider editor-type-id="android-designer2" />
+=======
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentDetalle.java">
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
@@ -526,22 +812,78 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentHomeObjetivos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/actividad_principal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseComidaConsumida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaObjetivos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseObjetivosUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPerfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/diseno_item_listview_objetivos_usuario.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -562,18 +904,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentEditarDatosPerfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_inicio.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="40" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentIngresarProporcion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
           <caret line="134" column="50" selection-start-line="134" selection-start-column="50" selection-end-line="134" selection-end-column="50" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseComidaConsumida.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClasePerfil.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1755">
           <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
         </state>
@@ -583,16 +965,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="753">
           <caret line="86" column="61" selection-start-line="86" selection-start-column="61" selection-end-line="86" selection-end-column="61" />
+=======
+        <state relative-caret-position="222">
+          <caret line="87" column="78" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_home_dieta.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_proporcion.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_ingresar_datos_peso.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java">
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="210">
           <caret line="25" column="161" selection-start-line="25" selection-start-column="161" selection-end-line="25" selection-end-column="161" />
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="40" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_detalle_comida_dieta.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -608,10 +1023,47 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_modificar_objetivo_agregado.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_editar_datos_perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="126" column="32" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_perfil.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="152" column="32" lean-forward="true" selection-start-line="152" selection-start-column="32" selection-end-line="152" selection-end-column="32" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/diseno_item_cardview_comidas_dieta.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentHomeObjetivos.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_pantalla_home_objetivos.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java">
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
@@ -625,20 +1077,41 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="17" selection-end-column="52" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ClaseObjetivosUsuario.java">
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPantallaInicio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
         </state>
       </provider>
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/diseno_ltem_listview_categoria_dieta.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeCategoriasComida.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -649,8 +1122,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ActividadPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1185">
           <caret line="97" column="38" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="38" />
+=======
+        <state relative-caret-position="422">
+          <caret line="143" column="4" selection-start-line="143" selection-start-column="4" selection-end-line="151" selection-end-column="52" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
     </entry>
@@ -662,21 +1141,48 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentListaDeComida.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="124" column="6" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="272">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+=======
+        <state relative-caret-position="786">
+          <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
           <folding>
             <element signature="e#5072#5515#0" expanded="true" />
             <element signature="e#5514#5515#0" expanded="true" />
           </folding>
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentHomeDieta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_comidas_dieta.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_objetivos.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
     </entry>
@@ -688,7 +1194,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentIngresarDatosPeso.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/ManejadorBaseDeDatos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_lista_categorias_dieta.xml">
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
@@ -715,11 +1231,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/proyectofinal/FragmentPerfil.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="420">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="416">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+>>>>>>> ff00f57d29655e56a8636c1187c40abe8f0b403e
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         </state>
       </provider>
     </entry>

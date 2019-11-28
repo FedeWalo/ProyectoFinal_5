@@ -99,7 +99,8 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IngresoVecesPorSemana" />
+        app:layout_constraintTop_toBottomOf="@+id/IngresoVecesPorSemana"
+        android:textColor="#fff"/>
 
     <EditText
         android:id="@+id/IngresoAltura"
@@ -120,6 +121,7 @@
         app:layout_constraintBottom_toTopOf="@id/pregunta5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/pregunta4">
 
         <RadioButton
@@ -148,6 +150,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pregunta4" />
     </RadioGroup>
+=======
+        app:layout_constraintTop_toBottomOf="@+id/Pregunta3"
+        android:textColor="#fff"/>
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 
     <EditText
         android:id="@+id/ingresoEdad"
@@ -160,7 +166,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pregunta3" />
+        app:layout_constraintTop_toBottomOf="@+id/Pregunta3"
+        android:textColor="#fff"/>
 
     <Button
         android:id="@+id/ConfirmarEdicionDatosPerfil"
@@ -183,7 +190,8 @@
         android:layout_marginTop="4dp"
         android:text="volver"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 

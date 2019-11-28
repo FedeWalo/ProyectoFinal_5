@@ -93,7 +93,7 @@ public class FragmentPantallaInicio extends Fragment{
         return Grafico;
     }
 
-    private void legend(BarChart Grafico){
+   /* private void legend(BarChart Grafico){
         Legend legend=Grafico.getLegend();
         legend.setForm(Legend.LegendForm.CIRCLE);
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
@@ -106,7 +106,7 @@ public class FragmentPantallaInicio extends Fragment{
             Datos.add(Dato);
         }
         legend.setCustom(Datos);
-    }
+    }*/
 
     //definicion de las barras con colores
 
@@ -137,7 +137,11 @@ public class FragmentPantallaInicio extends Fragment{
     }
 
     public void createCharts(){
+<<<<<<< HEAD
         Grafico=getSameChart(Grafico,"",Color.RED,Color.TRANSPARENT,1000);
+=======
+       // Grafico=getSameChart(Grafico,"Proporcion",Color.RED,Color.TRANSPARENT,1000);
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
         Grafico.setData(getBarData());
         Grafico.invalidate();
         ejex(Grafico.getXAxis());

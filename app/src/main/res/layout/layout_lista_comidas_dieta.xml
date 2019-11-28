@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
+<<<<<<< HEAD
     android:background="@drawable/fonodob">
 
 
@@ -13,6 +14,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:text="volver" />
+=======
+    android:background="@drawable/fondo">
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,7 +28,7 @@
             android:textSize="34sp"
             android:layout_centerInParent="true"
             android:text="Comidas"
-            android:textColor="#090C1B"/>
+            android:textColor="#fff"/>
     </RelativeLayout>
 
     <GridView
@@ -34,6 +38,10 @@
         android:layout_weight="8"
         android:columnWidth="135dp"
         android:gravity="center"
+<<<<<<< HEAD
         android:numColumns="auto_fit"
     />
+=======
+        android:numColumns="auto_fit" />
+>>>>>>> 6ef25befcb2e257b905027390e37a6833fb831ac
 </LinearLayout>
