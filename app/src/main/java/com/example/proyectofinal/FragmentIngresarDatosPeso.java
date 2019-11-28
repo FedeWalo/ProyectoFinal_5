@@ -23,11 +23,14 @@ public class FragmentIngresarDatosPeso extends Fragment implements View.OnClickL
     Button boton;
     Button botonEliminar;
     Button BotonVolver;
+    ClasePerfil PerfilTraido;
 
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
+        ClasePerfil perfil = new ClasePerfil();
         View VistaADevolver;
         VistaADevolver = infladorDeLayouts.inflate(R.layout.layout_ingresar_datos_peso,GrupoDeLaVista,false);
+        PerfilTraido = perfil.TraerUltimosDatosPerfil(VistaADevolver.getContext());
         ActividadPrincipal ActividadAnfitriona;
         ActividadAnfitriona = (ActividadPrincipal) getActivity();
         BotonVolver = VistaADevolver.findViewById(R.id.Volver);
@@ -71,24 +74,38 @@ public class FragmentIngresarDatosPeso extends Fragment implements View.OnClickL
                         }
                     }
                     if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() >= 0) {
-                        ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
-                        ClaseObjetivosUsuario U;
-                        U = new ClaseObjetivosUsuario(ActividadAnfitriona.objetivosUsuario.getIdObjetivo(), ActividadAnfitriona.objetivosUsuario.getTipoDeObjetivo(), PesoAInsertar, 0, ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), Static.SumarRestarDias(ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), SemanasAInsertar * 7), ActividadAnfitriona.objetivosUsuario.getPesoInicial());
-                        U.UpdateObjetivo(U, getActivity());
-                        ActividadAnfitriona.HomeObjetivos();
+                        if(((PesoAInsertar-PerfilTraido.getPeso())/SemanasAInsertar)<2 && ((PesoAInsertar-PerfilTraido.getPeso())/SemanasAInsertar>-2)) {
+                            ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
+                            ClaseObjetivosUsuario U;
+                            U = new ClaseObjetivosUsuario(ActividadAnfitriona.objetivosUsuario.getIdObjetivo(), ActividadAnfitriona.objetivosUsuario.getTipoDeObjetivo(), PesoAInsertar, 0, ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), Static.SumarRestarDias(ActividadAnfitriona.objetivosUsuario.getFechaDeInicio(), SemanasAInsertar * 7), ActividadAnfitriona.objetivosUsuario.getPesoInicial());
+                            U.UpdateObjetivo(U, getActivity());
+                            ActividadAnfitriona.HomeObjetivos();
+                        }
+                        else {
+                            Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Su objetivo es muy dificl! pruebe con otro.", Toast.LENGTH_SHORT);
+                            toast1.setGravity(Gravity.CENTER, 0, 450);
+                            toast1.show();
+                        }
 
                     } else if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() < 0 && HayUnObjetivoPesoCargado == false) {
-                        Calendar calendar = Calendar.getInstance();
-                        ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
-                        Date FechaHoy = calendar.getTime();
-                        ClaseObjetivosUsuario U;
-                        U = new ClaseObjetivosUsuario(0, 0, PesoAInsertar, 0, FechaHoy, Static.SumarRestarDias(FechaHoy, SemanasAInsertar * 7), 0);
-                        U.AgregarNuevoObjetivo(U, getActivity());
-                        ActividadAnfitriona.HomeObjetivos();
+                        if((((PesoAInsertar-PerfilTraido.getPeso())/SemanasAInsertar)<2 && ((PesoAInsertar-PerfilTraido.getPeso())/SemanasAInsertar)>-2)) {
+                            Calendar calendar = Calendar.getInstance();
+                            ClaseObjetivosUsuario Static = new ClaseObjetivosUsuario();
+                            Date FechaHoy = calendar.getTime();
+                            ClaseObjetivosUsuario U;
+                            U = new ClaseObjetivosUsuario(0, 0, PesoAInsertar, 0, FechaHoy, Static.SumarRestarDias(FechaHoy, SemanasAInsertar * 7), 0);
+                            U.AgregarNuevoObjetivo(U, getActivity());
+                            ActividadAnfitriona.HomeObjetivos();
+                        }
+                        else {
+                            Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "Su objetivo es muy dificl! pruebe con otro.", Toast.LENGTH_SHORT);
+                            toast1.setGravity(Gravity.CENTER, 0, 450);
+                            toast1.show();
+                        }
+
                     } else if (ActividadAnfitriona.objetivosUsuario.getIdObjetivo() < 0 && HayUnObjetivoPesoCargado) {
                         Toast toast1 = Toast.makeText(ActividadAnfitriona.getApplicationContext(), "No puede haber dos objetivos del mismo tipo", Toast.LENGTH_SHORT);
                         toast1.setGravity(Gravity.CENTER, 0, 450);
-
                         toast1.show();
                     }
                 }

@@ -23,7 +23,7 @@ public class  FragmentDetalle extends Fragment implements View.OnClickListener{
     TextView Categoria;
     TextView FitPoints;
     TextView Detalles;
-    //TextView Bueno;
+    TextView Bueno;
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
         View VistaAdevolver;
@@ -34,7 +34,7 @@ public class  FragmentDetalle extends Fragment implements View.OnClickListener{
         TituloComida = VistaAdevolver.findViewById(R.id.TituloComida);
         FitPoints = VistaAdevolver.findViewById(R.id.FitPoint);
         Detalles=VistaAdevolver.findViewById(R.id.DetalleComida);
-        //Bueno = VistaAdevolver.findViewById(R.id.Bueno);
+        Bueno = VistaAdevolver.findViewById(R.id.TxtBueno);
         BotonConsumir = VistaAdevolver.findViewById(R.id.Boton_FrDetalleComida);
         BotonVolver = VistaAdevolver.findViewById(R.id.BotonVolverAInicio);
 
@@ -47,13 +47,13 @@ public class  FragmentDetalle extends Fragment implements View.OnClickListener{
         TituloComida.setText(ActividadAnfitriona._ComidaSeleccionadaEnFragmentListaDeComida.getNombre());
         FitPoints.setText(""+ActividadAnfitriona._ComidaSeleccionadaEnFragmentListaDeComida.getFitPoints());
         Detalles.setText(ActividadAnfitriona._ComidaSeleccionadaEnFragmentListaDeComida.getDetalle());
-        /*if(ActividadAnfitriona._ComidaSeleccionadaEnFragmentListaDeComida.getBueno()==1){
-            Bueno.setText("Bueno");
+        if(ActividadAnfitriona._ComidaSeleccionadaEnFragmentListaDeComida.getBueno()==1){
+            Bueno.setText("FitPoints Buenos");
         }
         else{
-            Bueno.setText("Malo");
+            Bueno.setText("FitPoints Malos");
         }
-*/
+
         BotonVolver.setOnClickListener(this);
         BotonConsumir.setOnClickListener(this);
         return  VistaAdevolver;

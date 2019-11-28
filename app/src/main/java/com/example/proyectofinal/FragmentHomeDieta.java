@@ -6,22 +6,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.example.proyectofinal.R;
 
 import java.util.ArrayList;
 
 public class FragmentHomeDieta extends Fragment implements View.OnClickListener {
     Button Boton;
-    ArrayList<ClaseComidaConsumida> listComidas;
+    ArrayList<ClaseComidaConsumida> listComidasConsumidas;
+    ArrayList<ClaseComida> ListComidas;
+    ArrayList<ClaseComida> ListADevolver;
     ListView ListViewListaUltimasComidasConsumidas;
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts,ViewGroup GrupoDeLaVista, Bundle Datos) {
+        ListADevolver = new ArrayList<>();
         View VistaAdevolver;
         VistaAdevolver = infladorDeLayouts.inflate(R.layout.layout_home_dieta,GrupoDeLaVista,false);
         Boton= VistaAdevolver.findViewById(R.id.Boton_FrInicio);
@@ -29,20 +30,39 @@ public class FragmentHomeDieta extends Fragment implements View.OnClickListener 
         ActividadAnfitriona = (ActividadPrincipal) getActivity();
 
         //declaro e instancio las categorias
-        ClaseComidaConsumida MisComidas;
-        MisComidas = new ClaseComidaConsumida();
+        ClaseComidaConsumida MisComidasConsumidas;
+        MisComidasConsumidas = new ClaseComidaConsumida();
         //uso el objeto miscategorias para llenar la lista
-        listComidas =MisComidas.ObtenerUltimasConsumidas(getActivity());
+        listComidasConsumidas =MisComidasConsumidas.ObtenerUltimasConsumidas(getActivity());
+
+        //declaro e instancio las categorias
+        ClaseComida MisComidas;
+        MisComidas = new ClaseComida();
+        //uso el objeto miscategorias para llenar la lista
+        ListComidas =MisComidas.ObtenerTodas(getActivity());
+
+
+        for (ClaseComida comida: ListComidas) {
+
+            for (ClaseComidaConsumida _comida: listComidasConsumidas) {
+
+                if (comida.getNombre().equals(_comida.getNombre())) {
+                   ListADevolver.add(comida);
+
+                }
+            }
+        }
 
         //declaro y relaciono mi objeto listview
         ListViewListaUltimasComidasConsumidas = VistaAdevolver.findViewById(R.id.ListaCategorias);
 
         //defino e instancio el adaptador, mandandole el Arraylist y el contexto
         FragmentHomeDieta.AdaptadorListViewCategoriaDieta adaptador;
-        adaptador= new FragmentHomeDieta.AdaptadorListViewCategoriaDieta(listComidas, VistaAdevolver.getContext());
+        adaptador= new FragmentHomeDieta.AdaptadorListViewCategoriaDieta(listComidasConsumidas, VistaAdevolver.getContext());
 
         //le asigno el adaptador al listview
         ListViewListaUltimasComidasConsumidas.setAdapter(adaptador);
+        ListViewListaUltimasComidasConsumidas.setOnItemClickListener(EscuchadorParaListView);
         Boton.setOnClickListener(this);
         return VistaAdevolver;
     }
@@ -100,5 +120,24 @@ public class FragmentHomeDieta extends Fragment implements View.OnClickListener 
             return VistaADevovler;
         }
     }
+
+    AdapterView.OnItemClickListener EscuchadorParaListView = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            ClaseComida ComidaElegida = new ClaseComida();
+           if (listComidasConsumidas.size() > 0) {
+               for (ClaseComida comida : ListADevolver) {
+
+                   if (comida.getNombre().equals(listComidasConsumidas.get(position).getNombre())) {
+                       ComidaElegida = comida;
+                   }
+
+               }
+           }
+            ActividadPrincipal ActividadAnfitriona;
+            ActividadAnfitriona = (ActividadPrincipal) getActivity();
+            ActividadAnfitriona.ProcesarDatosActListaComidas(ComidaElegida);
+        }
+    };
 
 }

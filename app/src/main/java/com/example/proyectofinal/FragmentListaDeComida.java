@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -17,13 +18,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class FragmentListaDeComida extends Fragment {
+public class FragmentListaDeComida extends Fragment implements View.OnClickListener {
 
-    ArrayList<ClaseCategoriasDieta> listCategorias;
     ArrayList<ClaseComida> listComidasPorCategoria;
-    ArrayList<ClaseComida> listComidas;
-    ArrayAdapter<String> Adaptador;
-    ListView ListViewListaComidasPorCategorias;
+    Button VolverAListaCategorias;
     private GridView GridViewListaComidasPorCategorias;
     @Override
     public View onCreateView(LayoutInflater infladorDeLayouts, ViewGroup GrupoDeLaVista, Bundle Datos) {
@@ -42,6 +40,9 @@ public class FragmentListaDeComida extends Fragment {
         //declaro y relaciono mi objeto listview
         GridViewListaComidasPorCategorias = VistaAdevolver.findViewById(R.id.ListaComidas);
 
+        //declaro y relaciono mi boton
+        VolverAListaCategorias =VistaAdevolver.findViewById(R.id.VolverAListaCategorias);
+
         //defino e instancio el adaptador, mandandole el Arraylist y el contexto
         AdaptadorGrillaCategoriaDieta adaptador;
         adaptador= new AdaptadorGrillaCategoriaDieta (listComidasPorCategoria,VistaAdevolver.getContext());
@@ -50,6 +51,7 @@ public class FragmentListaDeComida extends Fragment {
         GridViewListaComidasPorCategorias.setAdapter(adaptador);
 
         GridViewListaComidasPorCategorias.setOnItemClickListener(EscuchadorParaListView);
+        VolverAListaCategorias.setOnClickListener(this);
         return VistaAdevolver;
     }
 
@@ -121,4 +123,15 @@ public class FragmentListaDeComida extends Fragment {
 
         }
     };
+
+    @Override
+    public void onClick(View view){
+        ActividadPrincipal ActividadAnfitriona;
+        ActividadAnfitriona = (ActividadPrincipal) getActivity();
+        Button BotonPresionado;
+        BotonPresionado= (Button)view;
+        if(BotonPresionado.getId() ==R.id.VolverAListaCategorias) {
+            ActividadAnfitriona.ProcesarDatosHomeDieta();
+        }
+    }
 }

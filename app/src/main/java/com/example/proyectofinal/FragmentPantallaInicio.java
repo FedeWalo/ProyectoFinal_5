@@ -86,7 +86,7 @@ public class FragmentPantallaInicio extends Fragment{
 
     private BarChart getSameChart(BarChart Grafico,String Descripcion,int COlorDeTexto,int ColorFondo,int TimeAnimation){
         Grafico.getDescription().setText(Descripcion);
-        Grafico.getDescription().setTextSize(15);
+       Grafico.getDescription().setTextSize(15);
         Grafico.setBackgroundColor(ColorFondo);
         Grafico.animateY(TimeAnimation);
 
@@ -107,6 +107,8 @@ public class FragmentPantallaInicio extends Fragment{
         }
         legend.setCustom(Datos);
     }
+
+    //definicion de las barras con colores
 
     private ArrayList<BarEntry>getBarEntries() {
         ArrayList<BarEntry> Datos=new ArrayList<>();
@@ -135,7 +137,7 @@ public class FragmentPantallaInicio extends Fragment{
     }
 
     public void createCharts(){
-        Grafico=getSameChart(Grafico,"Proporcion",Color.RED,Color.TRANSPARENT,1000);
+        Grafico=getSameChart(Grafico,"",Color.RED,Color.TRANSPARENT,1000);
         Grafico.setData(getBarData());
         Grafico.invalidate();
         ejex(Grafico.getXAxis());
@@ -150,6 +152,7 @@ public class FragmentPantallaInicio extends Fragment{
             dataSet.setColors(ColoresConIdealBuenos);
         }
         dataSet.setValueTextSize(15);
+
         return dataSet;
     }
 

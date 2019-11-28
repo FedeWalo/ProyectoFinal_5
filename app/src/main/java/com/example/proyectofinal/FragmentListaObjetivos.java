@@ -47,7 +47,7 @@ public class FragmentListaObjetivos extends Fragment implements View.OnClickList
                 }
 
             }
-            else if (objetivo.getTipoDeObjetivo()== 1){
+             if (objetivo.getTipoDeObjetivo()== 1){
 
                 for (ClaseObjetivo _objetivo: ListObjetivos) {
                     if (_objetivo.getTipoDeObjetivo() == 0){
@@ -125,7 +125,7 @@ public class FragmentListaObjetivos extends Fragment implements View.OnClickList
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Date fecha = new Date();
             ClaseObjetivosUsuario U = new ClaseObjetivosUsuario(-1,0,0,0,fecha,fecha,0);
-            if(ListObjetivos.get(position).getTipoDeObjetivo()== 0) {
+            if(ListObjetivoAMostrar.get(position).getTipoDeObjetivo()== 0) {
                 ActividadPrincipal ActividadAnfitriona;
                 ActividadAnfitriona = (ActividadPrincipal) getActivity();
                 ActividadAnfitriona.IngresarDatosPeso(U);

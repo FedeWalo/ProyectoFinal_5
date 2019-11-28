@@ -71,33 +71,38 @@ public class ClaseComida {
 
     public ArrayList<ClaseComida> ObtenerTodas(Context context){
         AccesoALaBase = new ManejadorBaseDeDatos(context,"BDFitLife",null,1);
-        BaseDeDatos = AccesoALaBase.getWritableDatabase();
+        BaseDeDatos = AccesoALaBase.getReadableDatabase();
 
         ArrayList<ClaseComida> ListaADevolver;
-
         ListaADevolver = new ArrayList<ClaseComida>();
         Cursor RegistrosLeidos;
         String SQLLectura;
         SQLLectura="select * from Comidas"; //entre las commilas va lo mismo que podria ir en un stored
-        RegistrosLeidos = BaseDeDatos.rawQuery(SQLLectura, null);
-        ClaseComida ObjetoComida = new ClaseComida();
+        Log.d("prueba","la consulta es:" + SQLLectura);
+        RegistrosLeidos = AccesoALaBase.EjecutarConsultaLeer(SQLLectura);
 
         //REGISTROSLEIDOS SE UTIIZA COMO UN ARRAY:
         if(RegistrosLeidos.getCount()>0){
             for(int PunteroRegistro=0; PunteroRegistro<RegistrosLeidos.getCount(); PunteroRegistro++){
+                ClaseComida ObjetoComida = new ClaseComida();
                 RegistrosLeidos.moveToPosition(PunteroRegistro);
+                Log.d("prueba","entro a leer");
 
                 ObjetoComida.idComida = RegistrosLeidos.getInt(0);
                 ObjetoComida.idCategoria = RegistrosLeidos.getInt(1);
                 ObjetoComida.Nombre = RegistrosLeidos.getString(2);
                 ObjetoComida.FitPoints = RegistrosLeidos.getInt(3);
-                ObjetoComida.Imagen = RegistrosLeidos.getString(4);
-                ObjetoComida.Detalle = RegistrosLeidos.getString(5);
+                ObjetoComida.Bueno = RegistrosLeidos.getInt(4);
+                ObjetoComida.Imagen = RegistrosLeidos.getString(5);
+                ObjetoComida.Detalle = RegistrosLeidos.getString(6);
+
+                Log.d("prueba","El id de la cat traida es " + ObjetoComida.idComida);
+                Log.d("prueba","El nombre de la cat traida es " + ObjetoComida.Nombre);
 
                 ListaADevolver.add(ObjetoComida);
             }
         }else{
-            Log.d("PruebaBD","No hay comidas");
+            Log.d("Prueba","No hay comidas");
             //NO HAY REGISTROS
         }
 
